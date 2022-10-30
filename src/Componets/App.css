@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+/* Theme */
+.light-theme {
+  background: #fff;
+  color: #000;
+  --cardbg: #fff;
+  --card-color: #000;
+  --bg-light: #f8f9fa;
+  --cl-light: #000;
+  --social-color: #000;
+}
+.dark-theme {
+  --cardbg: rgb(68 59 59 / 48%);
+  --card-color: #fff;
+  background: rgb(0, 50, 70);
+  color: #fff;
+  --bg-light: rgba(0, 0, 0, 0.596);
+  --cl-light: #fff;
+  --social-color: #fff;
+}
+.dark-icon {
+  font-size: 1.5rem;
+}
+/* navbar */
+.navbar-brand {
+  font-size: 2rem;
+}
+.navbar-brand svg {
+  font-size: 3rem;
+  color: #044204;
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+.nav-link {
+  display: block;
+  padding: 1rem !important;
+  font-size: 1rem;
+  color: #fff !important;
+  transition: 0.5s all linear;
+}
+
+.nav-link:hover,
+.active {
+  color: #000 !important;
+}
+
+/* card */
+.icons svg {
+  font-size: 5rem;
+}
+.card {
+  background: var(--cardbg);
+  color: var(--card-color);
+}
+
+.card-body {
+  text-align: center;
+  border-radius: 5px;
+}
+.card:hover {
+  transition: 0.5s all ease-in !important;
+  transform: scale(1.15) !important;
+}
+/* back to top button */
+.arrow {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+
+  font-size: 2rem;
+  color: purple;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+}
+/* footer */
+.social {
+  display: flex;
+  gap: 1rem;
+}
+.social-icons {
+  font-size: 2rem;
+  color: var(--social-color);
+  gap: 1rem;
+}
+.bg-custom {
+  background: var(--bg-light);
+  color: var(--cl-light);
+}
+
+/* responsive  */
+
+@media only screen and (min-width: 320px) and (max-width: 576px) {
+  /* footer */
+  .foot {
+    margin: 1rem 0 !important;
+  }
+  .left {
+    margin: 0 1rem !important;
+  }
+  /* home  */
+  .link {
+    margin: 1rem 0 !important;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 375px) {
+  .left {
+    margin: 1rem 0 !important;
+  }
+}
