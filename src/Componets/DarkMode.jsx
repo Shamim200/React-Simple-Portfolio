@@ -7,8 +7,22 @@ const DarkMode = () => {
   const [toggle, setToggle] = useState(false);
 
   const toggleTheme = () => {
+    // traditional
+
+    // if (theme === "dark-theme") {
+    //   localStorage.setItem("theme", "light-theme");
+    //   setTheme("light-theme");
+    // } else {
+    //   localStorage.setItem("theme", "dark-theme");
+
+    //   setTheme("dark-theme");
+    // }
+
     // use ternary operator
-    theme === "dark-theme" ? setTheme("light-theme") : setTheme("dark-theme");
+
+    theme === "dark-theme"
+      ? setTheme("light-theme") || localStorage.setItem("theme", "light-theme")
+      : setTheme("dark-theme") || localStorage.setItem("theme", "dark-theme");
 
     setToggle(!toggle);
   };
@@ -16,7 +30,16 @@ const DarkMode = () => {
   useEffect(() => {
     document.body.className = theme;
 
-    localStorage.setItem("theme", JSON.stringify(theme));
+    const useLocalStorage = localStorage.getItem("theme");
+
+    // traditional
+    // if (useLocalStorage) {
+    //   setTheme(useLocalStorage);
+    // }
+
+    // use ternary operator
+
+    useLocalStorage: setTheme(useLocalStorage);
   }, [theme]);
 
   return (
