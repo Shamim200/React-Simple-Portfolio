@@ -19,6 +19,28 @@ import Error from "./Error";
 import DarkMode from "../DarkMode";
 
 const Navigation = () => {
+  const obj = [
+    {
+      title: "home",
+      links: "/",
+    },
+    {
+      title: "about",
+      links: "/about",
+    },
+    {
+      title: "service",
+      links: "/service",
+    },
+    {
+      title: "skills",
+      links: "/skills",
+    },
+    {
+      title: "contact",
+      links: "/contact",
+    },
+  ];
   return (
     <BrowserRouter>
       <Navbar bg="info" expand="sm">
@@ -30,23 +52,22 @@ const Navigation = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mx-auto">
-              <Nav.Link as={NavLink} to="/">
-                Home
-              </Nav.Link>
-              <Nav.Link as={NavLink} to="/about">
-                About
-              </Nav.Link>
+              {obj.map((val, ind) => {
+                const { title, links } = val;
 
-              <Nav.Link as={NavLink} to="/service">
-                Service
-              </Nav.Link>
-              <Nav.Link as={NavLink} to="/skills">
-                Skills
-              </Nav.Link>
-              <Nav.Link as={NavLink} to="/contact">
-                Contact
-              </Nav.Link>
+                return (
+                  <Nav.Link
+                    key={ind}
+                    as={NavLink}
+                    className="text-capitalize"
+                    to={links}
+                  >
+                    {title}
+                  </Nav.Link>
+                );
+              })}
             </Nav>
+
             <DarkMode />
           </Navbar.Collapse>
         </Container>
