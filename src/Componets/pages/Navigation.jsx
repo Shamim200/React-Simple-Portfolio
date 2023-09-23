@@ -1,5 +1,3 @@
-import React from "react";
-
 // use react router dom
 import { BrowserRouter, Routes, Route, NavLink, Link } from "react-router-dom";
 // use react boostrap
@@ -36,6 +34,7 @@ const Navigation = () => {
       title: "skills",
       links: "/skills",
     },
+
     {
       title: "contact",
       links: "/contact",
