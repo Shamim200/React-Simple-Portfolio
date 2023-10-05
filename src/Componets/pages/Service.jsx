@@ -1,7 +1,7 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import Card from "./Card";
-import Data from "./Data";
+import Card from "../Card";
+import Data from "../Data";
 
 const Service = () => {
   return (

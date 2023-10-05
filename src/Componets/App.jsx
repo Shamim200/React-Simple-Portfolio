@@ -1,9 +1,9 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Navigation from "./pages/Navigation";
+import Navigation from "./Navigation";
 import "./App.css";
 import ToTop from "./ToTop";
-import Footer from "./pages/Footer";
+import Footer from "./Footer";
 const App = () => {
   return (
     <div>

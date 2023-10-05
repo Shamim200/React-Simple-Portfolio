@@ -1,6 +1,6 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import Common from "./Common";
+import Common from "../Common";
 import Service from "./Service";
 
 const Home = () => {

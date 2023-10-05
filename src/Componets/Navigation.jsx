@@ -1,3 +1,4 @@
+import { lazy, Suspense } from "react";
 // use react router dom
 import { BrowserRouter, Routes, Route, NavLink, Link } from "react-router-dom";
 // use react boostrap
@@ -7,14 +8,16 @@ import { Navbar, Nav, Container } from "react-bootstrap";
 import { SiMongodb } from "react-icons/si";
 
 // react pages
-import Home from "./Home";
-import About from "./About";
-import Service from "./Service";
-import Skills from "./Skills";
-import Contact from "./Contact";
-import Error from "./Error";
 
-import DarkMode from "../DarkMode";
+const Home = lazy(() => import("./pages/Home"));
+const About = lazy(() => import("./pages/About"));
+const Service = lazy(() => import("./pages/Service"));
+const Skills = lazy(() => import("./pages/Skills"));
+const Contact = lazy(() => import("./pages/Contact"));
+const Error = lazy(() => import("./pages/Error"));
+
+import DarkMode from "./DarkMode";
+import Loading from "./Loading";
 
 const Navigation = () => {
   const obj = [
@@ -71,16 +74,16 @@ const Navigation = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-
-      <Routes>
-        {/* <Route path="/" element={<Hero />} /> */}
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/service" element={<Service />} />
-        <Route path="/skills" element={<Skills />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="*" element={<Error />} />
-      </Routes>
+      <Suspense fallback={<Loading />}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/service" element={<Service />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<Error />} />
+        </Routes>
+      </Suspense>
     </BrowserRouter>
   );
 };
