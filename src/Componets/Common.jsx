@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
+import Aos from "aos";
 
 import { Link } from "react-router-dom";
 const Common = ({ title, sub, url, btn, imgs }) => {
+  useEffect(() => {
+    Aos.init({
+      duration: 2000,
+    });
+  }, []);
+
   return (
     <section>
       <div className="row d-flex justify-content-center align-items-center py-4">
-        <div className="col-lg-6 col-md-12 my-md-3">
+        <div className="col-lg-6 col-md-12 my-md-3" data-aos="fade-up-right">
           <h2 className="text-danger heading text-capitalize">
             {title}
             <br />
@@ -26,7 +33,7 @@ const Common = ({ title, sub, url, btn, imgs }) => {
             {btn}
           </Link>
         </div>
-        <div className="col-lg-6 col-md-12 images">
+        <div className="col-lg-6 col-md-12 images" data-aos="fade-up-left">
           <img src={imgs} className="img-fluid w-100" alt="web site images" />
         </div>
       </div>

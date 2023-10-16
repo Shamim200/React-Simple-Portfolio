@@ -6,6 +6,7 @@ body {
 /* Theme */
 .light-theme {
   background: #fff;
+  transition: 2s all linear;
   color: #000;
   --cardbg: #fff;
   --card-color: #000;
@@ -17,6 +18,7 @@ body {
   --cardbg: rgb(68 59 59 / 48%);
   --card-color: #fff;
   background: rgb(0, 50, 70);
+  transition: 2s all linear;
   color: #fff;
   --bg-light: rgba(0, 0, 0, 0.596);
   --cl-light: #fff;
@@ -24,6 +26,7 @@ body {
 }
 .dark-icon {
   font-size: 1.5rem;
+  transition: all 2s linear !important;
 }
 /* navbar */
 .navbar-brand {

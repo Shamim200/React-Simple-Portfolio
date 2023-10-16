@@ -1,10 +1,15 @@
-import React from "react";
+import Aos from "aos";
+import { useEffect } from "react";
 
 const Card = ({ cardImg, title }) => {
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
+
   return (
     <>
       <div className="col-lg-4 col-md-6 col-12">
-        <div className="card">
+        <div className="card" data-aos="zoom-in-up">
           <img src={cardImg} className="card-img-top" alt="..." />
           <div className="card-body">
             <h5 className="card-title">{title}</h5>

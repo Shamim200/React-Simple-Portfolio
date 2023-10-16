@@ -1,10 +1,14 @@
-import React from "react";
-
+import React, { useEffect } from "react";
+import Aos from "aos";
 const skill = ({ icons }) => {
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
+
   return (
     <>
       <div className="col-lg-3 col-md-6 col-12">
-        <div className="card">
+        <div className="card" data-aos="zoom-in-up">
           <div className="card-body">
             <div className="icons">{icons}</div>
           </div>

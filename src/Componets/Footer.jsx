@@ -1,15 +1,20 @@
-import React from "react";
+import Aos from "aos";
+import React, { useEffect } from "react";
 
 import { FaFacebookF, FaYoutube, FaLinkedinIn } from "react-icons/fa";
 
 import { FiInstagram } from "react-icons/fi";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 
 const Footer = () => {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
   return (
     <section className="container-fluid bg-custom p-5">
       <div className="container">
-        <div className="row">
+        <div className="row" data-aos="zoom-in-up">
           <div className="col-lg-3 col-md-6 col-12 foot">
             <h2>Shamim BD</h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
