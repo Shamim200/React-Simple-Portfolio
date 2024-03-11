@@ -4,6 +4,11 @@ import {
   FaBootstrap,
   FaReact,
   FaNodeJs,
+  FaPython,
+  FaJava,
+  FaAngular,
+  FaVuejs,
+  FaLaravel,
 } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
 import {
@@ -12,6 +17,7 @@ import {
   SiMaterialui,
   SiTailwindcss,
   SiRedux,
+  SiTypescript,
 } from "react-icons/si";
 const Sdata = [
   {
@@ -46,6 +52,24 @@ const Sdata = [
   },
   {
     icons: <SiMongodb />,
+  },
+  {
+    icons: <FaPython />,
+  },
+  {
+    icons: <FaJava />,
+  },
+  {
+    icons: <FaAngular />,
+  },
+  {
+    icons: <FaVuejs />,
+  },
+  {
+    icons: <FaLaravel />,
+  },
+  {
+    icons: <SiTypescript />,
   },
 ];
 
