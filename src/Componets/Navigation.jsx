@@ -48,8 +48,7 @@ const Navigation = () => {
       <Navbar bg="info" expand="sm">
         <Container fluid className="mx-3">
           <Navbar.Brand as={Link} to="/">
-            <SiMongodb />
-            Portfolio
+            <img src="./vite.svg" alt="vite logo" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">

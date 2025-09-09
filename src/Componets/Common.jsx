@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Common = ({ title, sub, url, btn, imgs }) => {
   useEffect(() => {
     Aos.init({
-      duration: 2000,
+      duration: 3000,
     });
   }, []);
 
