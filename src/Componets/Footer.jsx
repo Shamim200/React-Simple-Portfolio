@@ -38,9 +38,7 @@ const Footer = () => {
           <div className="col-lg-3 col-md-6 col-12 foot">
             <h3>Follow Me:</h3>
             <div className="social">
-              <a href="">
-                <FaFacebookF className="social-icons" />
-              </a>
+              <FaFacebookF className="social-icons" />
 
               <FaYoutube className="social-icons" />
               <FaLinkedinIn className="social-icons" />
