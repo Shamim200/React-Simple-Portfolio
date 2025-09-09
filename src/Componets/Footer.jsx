@@ -1,10 +1,9 @@
+import { useEffect } from "react";
 import Aos from "aos";
-import React, { useEffect } from "react";
 
 import { FaFacebookF, FaYoutube, FaLinkedinIn } from "react-icons/fa";
 
 import { FiInstagram } from "react-icons/fi";
-// import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   useEffect(() => {
