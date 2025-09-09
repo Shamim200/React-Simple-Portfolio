@@ -39,7 +39,7 @@ const Footer = () => {
           <div className="col-lg-3 col-md-6 col-12 foot">
             <h3>Follow Me:</h3>
             <div className="social">
-              <a href="https://www.facebook.com/shamimhossain.shamim.1257">
+              <a href="">
                 <FaFacebookF className="social-icons" />
               </a>
 
