@@ -1,8 +1,8 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import Aos from "aos";
 const skill = ({ icons }) => {
   useEffect(() => {
-    Aos.init({ duration: 1000 });
+    Aos.init({ duration: 400 });
   }, []);
 
   return (

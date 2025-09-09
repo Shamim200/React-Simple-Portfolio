@@ -9,12 +9,12 @@ import { SiMongodb } from "react-icons/si";
 
 // react pages
 
-const Home = lazy(() => import("./pages/Home"));
-const About = lazy(() => import("./pages/About"));
-const Service = lazy(() => import("./pages/Service"));
-const Skills = lazy(() => import("./pages/Skills"));
-const Contact = lazy(() => import("./pages/Contact"));
-const Error = lazy(() => import("./pages/Error"));
+const Home = lazy(() => import("../pages/Home"));
+const About = lazy(() => import("../pages/About"));
+const Service = lazy(() => import("../pages/Service"));
+const Skills = lazy(() => import("../pages/Skills"));
+const Contact = lazy(() => import("../pages/Contact"));
+const Error = lazy(() => import("../pages/Error"));
 
 import DarkMode from "./DarkMode";
 import Loading from "./Loading";

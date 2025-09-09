@@ -1,5 +1,4 @@
-import React from "react";
-import Sdata from "../Sdata";
+import Sdata from "../Componets/Sdata";
 import Skill from "./skill";
 import { Container } from "react-bootstrap";
 const Skills = () => {

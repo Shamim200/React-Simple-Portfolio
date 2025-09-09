@@ -1,6 +1,5 @@
-import React from "react";
 import { Container } from "react-bootstrap";
-import Common from "../Common";
+import Common from "../Componets/Common";
 
 const About = () => {
   const data = {
